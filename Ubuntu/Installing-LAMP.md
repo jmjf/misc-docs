@@ -9,7 +9,7 @@ I prefer to replace /var/www with a symbolic link to another directory. I'm usin
 
 On my Windows host, I have a development directory. In that directory, the www subdirectory contains all web site development work. Different folders represent different sites or projects. I set up a default share named www in my base VM pointing to the www subdirectory on my Windows host. For each cloned server, I edit the www share to point to the appropriate subdirectory within the host's www directory.
 
-I set up everything in my base VM for web servers before I install Apache or Nginx. The only thing I have to change on a clone is the actual subdirectory shared (defined in VirtualBox, etc., not Linux.)
+I set up everything in my base VM for web servers before I install Apache or Nginx. The only thing I have to change on a clone is the actual subdirectory shared (defined in VirtualBox, etc., not Linux). Keeping the share name www on the clones makes the Linux stuff work so I don't have to redo it for each clone.
 
 `sudo mkdir /mnt/www`
 
@@ -19,7 +19,7 @@ I make the mount point writable to group and assigned to group www-data, the Apa
 
 `sudo chgrp /mnt/www www-data`
 
-Then I test mounting the shared folder. (I'm using VirtualBox. If you're using a VMWare Player, replace vboxsf with *WHAT*.
+Then I test mounting the shared folder. (I'm using VirtualBox. If you're using a VMWare Player, replace vboxsf with *WHAT*.)
 
 `sudo mount -t vboxsf www /mnt/www`
 
@@ -27,7 +27,9 @@ And do a simple test. If there is a file in the host folder I mounted, I should 
 
 `ls /mnt/www`
 
-Now that the mount is created and working, I link /var/www to it. WARNING: The following will delete all files in /var/www. If you've just installed Apache, all you're losing is the default index.html. If you have anything that matters there, copy it somewhere save before running these commands.
+Now that the mount is created and working, I link /var/www to it. 
+
+WARNING: The following will delete all files in /var/www. If you've just installed Apache, all you're losing is the default index.html. If you have anything that matters there, copy it somewhere else before running these commands.
 
 `sudo rm -R /var/www/*`
 
