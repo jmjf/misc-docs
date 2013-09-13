@@ -45,4 +45,4 @@ When GRUB finishes installing, you'll get an Installation complete message. You 
 
 Enter your user name--the login one, not the full name one. Hit enter. Enter your password and hit enter. Above the command prompt you'll see how horribly out of date your software already is.
 
-Proceed to install updates.
+Now it's time to install updates and set up a script that will fix things that break when we clone a VM and assign it a new host name.
