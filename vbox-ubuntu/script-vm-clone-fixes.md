@@ -1,5 +1,5 @@
-Script VM Clone Fixes
-=====================
+Script Virtual Machine Clone Fixes
+==================================
 
 When we clone a virtual machine in VirtualBox, several settings in Ubuntu need to change. You'll want to change the host name to something meaningful for the clone. (Why did you create the clone in the first place?) You'll also need to fix the network configuration because you'll change the MAC (media access control) address when you clone the VM. The MAC address uniquely identifies the network interface. If it changes and Ubuntu tries to use the old MAC, the network connection won't happen.
 
@@ -50,3 +50,6 @@ Now you can execute the script. The ~ is the shortcut for your home directory, r
     sudo ~/fix-clone.sh NewHostName
 
 After the script runs, it reboots the VM. Networking should work and the VM should have the new hostname. Add this script in your base VM so any clones will have it.
+
+## Note
+You can create the script file above in your host machine's text editor, copy it to the xfer share, the copy it from the xfer share to the guest or just run it from the xfer share if you don't want to copy it. If you take this approach, be sure you set your text editor to use Unix-friendly end-of-line options or the script will fail.

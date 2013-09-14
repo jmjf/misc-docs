@@ -1,5 +1,5 @@
-Installing Ubuntu Server on a Base Virtual Machine in VirtualBox
-================================================================
+Install Ubuntu Server on the Base Virtual Machine
+=================================================
 
 **Settings, Settings, Settings**
 After creating a virtual machine, select the VM and click Settings in the toolbar or right-mouse on the VM entry in the list of VMs and choose Settings. Choose System in the list of settings. In the Boot Order group, uncheck Floppy. Make sure CD/DVD-ROM is first in the boot order. Use the up and down arrow buttons on the right of the Boot Order list to move entries up and down as needed.

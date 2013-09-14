@@ -1,5 +1,5 @@
-Update/Upgrade Software Installed on Ubuntu
-==============--------=====================
+Update/Upgrade Installed Software on Ubuntu
+===========================================
 
 Ubuntu is a Debian-derived Linux and Linuxes in the Debian family use APT (Advanced Packaging Tool) as their package manager. Other Linuxes use different package managers. For example, the Red Hat family uses RPM (Red Hat Package Manager).
 

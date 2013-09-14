@@ -1,4 +1,4 @@
-Configure Shared Folders on VirtualBox
+Configure Shared Folders in VirtualBox
 ======================================
 
 ## Introduction

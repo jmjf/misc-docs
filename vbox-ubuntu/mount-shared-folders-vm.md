@@ -41,3 +41,5 @@ After the VM reboots, login. You should be able to list the directories (e.g., `
 
 ## Conclusion
 Now that the shared folders are mounting properly on boot, they'll mount for any cloned VM as well. If you need the cloned VM's www directory to point somewhere else, just edit the shared folder information in VirtualBox settings. Be sure the share is still named www when you're done. If the name stays the same, nothing needs to change on the VM to make the new www mount on boot.
+
+An important point to note is that Windows' standard end-of-line marker is carriage-return + line-feed where Unix-derivatives, including Linux and OSX, use line-feed only. If you're using a Windows text editor, check your settings/preferences and specify a Unix format or end-of-line. Some editors take this setting on a per-file basis. Others apply it globally. Some will change old files, others will only change it for new files. Generally, it isn't a problem for web developers to stick with a Unix-like end-of-line for everything.
